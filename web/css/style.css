@@ -1,0 +1,71 @@
+            .ui-content {
+                padding: 5px !important; 
+                margin: 0 !important;
+            }
+
+            .puppys { 
+                padding: 0; 
+                margin: 0; 
+                list-style: none;     
+            }
+
+            .puppys li { 
+                float: left; 
+                width: 50%; 
+            }
+
+            .puppys li a { 
+                display: block; 
+                margin: 5px; 
+            }
+
+            .puppys li a img, .show { 
+                display: block; 
+                width: 100%; 
+                height: auto; 
+            }
+
+            /* 0 - 480px */ 
+            @media all and (min-width: 480px){ 	
+                .puppys li { width: 33.33333333%; } 	
+            } 		
+
+            /* 481px - 768px */ 
+            @media only screen and (min-width: 768px) {     
+                .puppys li { width: 20%; } 
+            }  
+
+            /* 769px - 1024px */ 
+            @media only screen and (min-width: 1024px) {     
+                .puppys li { width: 16.66666666%; }  	
+            }  
+
+            /* 1025px - 1280px */ 
+            @media only screen and (min-width: 1280px) {     
+                .puppys li { width: 14.285714%; } 
+            }  
+
+            /* 1281px - 1440 */ 
+            @media only screen and (min-width: 1440px) {     
+                .puppys li { width: 12.5%; } 
+            }  
+
+            /* 1441px - 1600px */ 
+            @media only screen and (min-width: 1600px) {     
+                .puppys li { width: 11.111111%; } 
+            }  
+
+            /* 1601px - 1920px */ 
+            @media only screen and (min-width: 1920px) {     
+                .puppys li { width: 10%; } 
+            } 
+            /*******[END] CSS for content with responsive images*******/
+
+            .ui-li-thumb{
+                position:absolute;
+                top:0;
+                bottom:0;
+                padding-left: 10px;
+                margin:auto;
+            }
+        
