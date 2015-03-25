@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+
+        <!-- css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="foundation/css/foundation.css" />
+        <link rel="stylesheet" type="text/css" href="foundation/css/normalize.css" />
+
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <!--bootstrap-->
+
+        <!--Foundation-->
+
+        <script src="foundation/js/foundation.min.js"></script>
+        <script src="foundation/js/foundation.tab.js"></script>
+        <script src="foundation/js/foundation.topbar.js"></script>
+        <script src="foundation/js/vendor/modernizr.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.js"></script>
+
+        <!--Foundation-->
+
+        <style>
+            .social-button {
+                margin-top: 8px;
+                float: left;
+                left:55px
+
+            }
+            .social-button .large {
+                font-size: 50px;
+                line-height: 50px;
+                text-align: center;
+
+            }
+            .social-button span {
+                font-size: 12px;
+                text-align: center;
+                line-height: 20px;
+                vertical-align: middle;
+                display:block;
+                font-weight:bold;
+
+
+            }
+
+            .button #uploadwant {
+                font-size: 12px;
+                text-align: center;
+                line-height: 20px;
+                vertical-align: middle;
+                display:block;
+                color:white;
+                font-weight:bold;
+
+            }
+            #upload{
+                background: transparent;
+                font-weight:bold;
+            }
+            .top-bar{
+                background:red
+            }
+            .tabs > li.active > a,
+            .tabs > li.active > a:hover,
+            .tabs > li.active > a:focus{
+                color: #555555;
+                background-color: red;  
+            } 
+
+            #footer{
+                position:fixed;
+                width:100%;
+                bottom:0; 
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="">
+            <nav class="top-bar" data-topbar role="navigation">
+                <ul class="title-area">
+                    <li class="name">
+                        <img src="image/logo/whunted_white.png" style="margin-top: -10px;"></img>
+
+                        <a href="#" class="button" id="upload"> 
+                            <i class ="glyphicon glyphicon-user" style="position:relative;left:100px"></i>
+                            <span id="uploadwant" style="position:relative;left:100px">Profile</span>
+                        </a>
+                        <a href="#" class="button" id="upload"> 
+                            <i class ="glyphicon glyphicon-inbox" style="position:relative;left:40px"></i>
+                            <span id="uploadwant" style="position:relative;left:40px">Inbox</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </div>
+
+        <div class="row social-button">
+            <div class="small-12 large-12 columns ">
+                <ul class="button-group even-3" >
+
+
+                    <li> 
+                        <a href="#" class="button" style="background:red"> 
+                            <span>Wants</span>
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="#" class="button" style="background:red"> 
+                            <span>Hunts</span>
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="#" class="button" style="background:red"> 
+                            <span>Browse</span>  
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="footer">
+            <ul class="tabs" data-tab>
+                <li class="tab-title" id="tab1"><a href="#panel1">Tab 1</a></li>
+                <li class="tab-title" id="tab2"><a href="#panel2">Tab 2</a></li>
+                <li class="tab-title" id="tab3"><a href="#panel3">Tab 3</a></li>
+            </ul>
+        </div>
+        <script>
+            $('#tab1').on('click', function (event, tab) {
+                $('.tab-title').removeClass("active");
+                $('#tab1').addClass("active");
+            })
+            $('#tab2').on('click', function (event, tab) {
+                $('.tab-title').removeClass("active");
+                $('#tab2').addClass("active");
+            })
+            $('#tab3').on('click', function (event, tab) {
+                $('.tab-title').removeClass("active");
+                $('#tab3').addClass("active");
+            })
+            
+                    
+        </script>
+
+
+
+    </body>
+</html>

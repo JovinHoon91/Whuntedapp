@@ -5,7 +5,7 @@
         <title>WHUNTED</title>
         <!--Mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
         <!-- Optional theme -->
@@ -13,54 +13,82 @@
 
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        
-        <!--bootstrap-->
-        
-        
-    </head>
-    <body>
-        <div data-role="page" data-theme="a">
-            <!--Navigation bar in the top container, Header is in RED-->
-            <div data-role="header" data-position="fixed">
-                <!--Logo of Whunted is here-->
-                <div data-role="header" style="background-color: #E74C3C">
-                    <table cellspacing="4" align="center" width="100%">
-                        <tr>
-                            <td width="90%" align="center" style="padding-left: 10%;"><img src="image/logo/whunted_white.png"></td>
-                            <td width="10%"><a href="Login.html"><img src="image/icon/logout_v2.png"></a></td>
-                        </tr>
-                    </table>
-                </div>
-                <!--Main Navigation Bar-->
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#" class="ui-btn-active">WANTS</a></li>
-                        <li><a href="Hunts.html">HUNTS</a></li>
-                        <li><a href="Browse.html">BROWSE</a></li>
-                    </ul>
-                </div><!-- /navbar -->
-                <div data-role="header">
-                    <form method="post" action="#">
-                        <input type="search" id="search" placeholder="Search for a want" data-mini="true">
-                    </form>
-                </div>
-            </div><!-- /header -->
 
-            <!--List of content wishes goes here! User can also edit ask price-->
-            <div class="ui-grid-a">
-                <!--Bottom navigation bar in the bottom container, Footer-->
-                <div data-role="footer" data-position="fixed">
-                    <div data-role="navbar">
-                        <ul>
-                            <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
-                            <li><a href="Chat.html" style="font-size: 60%" rel="external"><img src="image/icon/chat.png"></a></li>
-                            <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
-                            <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
-                            <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
-                        </ul>
-                    </div>
-                </div><!-- /footer -->           
-            </div><!-- /page -->
+        <!--bootstrap-->
+
+        <!--jQuerymobile-->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+        <!--jQuerymobile-->
+        
+        <!--Foundation-->
+        <link rel="stylesheet" type="text/css" href="foundation/css/foundation.css" />
+        <link rel="stylesheet" type="text/css" href="foundation/css/normalize.css" />
+        <script src="foundation/js/foundation.min.js"></script>
+        <!--Foundation-->
+        
+        <style>
+            .btn-circle {
+                width: 25px;
+                height: 25px;
+                text-align: center;
+                padding: 6px 0;
+                font-size: 12px;
+                line-height: 1.42;
+                border-radius: 30px;
+            }
+            .glyphicon.glyphicon-camera {
+                font-size: 10px;
+            }
+            .btn{
+                width: 60px !important;
+                height: 60px !important;
+                border-radius: 50% !important;
+            }
+            #mybutton {
+                background: url('themes/images/icons-png/search-black.png') no-repeat scroll 0 0 transparent;
+                background-position: center center; 
+            }
+            #mybutton1 {
+                background: url('themes/images/icons-png/user-black.png') no-repeat scroll 0 0 transparent;
+                background-position: center center; 
+            }
+            #mybutton2 {
+                background: url('themes/images/icons-png/shop-black.png') no-repeat scroll 0 0 transparent;
+                background-position: center center; 
+            }
+            #mybutton3 {
+                background: url('themes/images/icons-png/camera-black.png') no-repeat scroll 0 0 transparent;
+                background-position: center center; 
+            }
+            #mybutton4 {
+                background: url('themes/images/icons-png/mail-black.png') no-repeat scroll 0 0 transparent;
+                background-position: center center; 
+            }
+
+
+
+        </style>
+
+    </head>
+
+    <body>
+
+
+        <div data-role="footer" data-position="fixed" data-fullscreen="true" style="border: #FFFFFF; font-size: 0.7em; margin-left: auto; margin-right: auto; width: 100%; text-align: center; background:transparent">
+
+
+            <a id="mybutton2" href="#" data-icon="" data-theme="a" data-iconpos="notext" data-role="button" class="btn" ></a>
+            <a id="mybutton1" href="#" data-icon="" data-theme="a" data-iconpos="notext" data-role="button" class="btn"></a>
+            <a id="mybutton3" href="#" data-icon="" data-theme="a" data-iconpos="notext" data-role="button" class="btn"></a>
+            <a id="mybutton4" href="#" data-icon="" data-theme="a" data-iconpos="notext" data-role="button" class="btn"></a>
+            <a id="mybutton" href="#" data-icon="" data-theme="a" data-iconpos="notext" data-role="button" class="btn"></a>
+
         </div>
+
     </body>
 </html>
