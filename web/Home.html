@@ -28,18 +28,14 @@
         <!--Foundation-->
 
         <style>
-            .social-button {
-                margin-top: 8px;
+            .social-button{
+                margin-top: 30px;
+                position:relative;
                 float: left;
-                left:55px
+                left:25px
 
             }
-            .social-button .large {
-                font-size: 50px;
-                line-height: 50px;
-                text-align: center;
 
-            }
             .social-button span {
                 font-size: 12px;
                 text-align: center;
@@ -47,6 +43,7 @@
                 vertical-align: middle;
                 display:block;
                 font-weight:bold;
+                color:white;
 
 
             }
@@ -66,19 +63,13 @@
                 font-weight:bold;
             }
             .top-bar{
-                background:red
-            }
-            .tabs > li.active > a,
-            .tabs > li.active > a:hover,
-            .tabs > li.active > a:focus{
-                color: #555555;
-                background-color: red;  
-            } 
+                background:red;
 
-            #footer{
-                position:fixed;
-                width:100%;
-                bottom:0; 
+            }
+            
+            div#tabshori ul li:active a{
+                background:#00000; 
+                color:#FFFFF;
             }
 
         </style>
@@ -92,13 +83,13 @@
                     <li class="name">
                         <img src="image/logo/whunted_white.png" style="margin-top: -10px;"></img>
 
-                        <a href="#" class="button" id="upload"> 
-                            <i class ="glyphicon glyphicon-user" style="position:relative;left:100px"></i>
-                            <span id="uploadwant" style="position:relative;left:100px">Profile</span>
+                        <a href="#" class="button" id="upload" style="position:relative;left:110px"> 
+                            <i class ="glyphicon glyphicon-user"></i>
+                            <span id="uploadwant">Profile</span>
                         </a>
-                        <a href="#" class="button" id="upload"> 
-                            <i class ="glyphicon glyphicon-inbox" style="position:relative;left:40px"></i>
-                            <span id="uploadwant" style="position:relative;left:40px">Inbox</span>
+                        <a href="#" class="button" id="upload" style="position:relative;right:-50px"> 
+                            <i class ="glyphicon glyphicon-camera" ></i>
+                            <span id="uploadwant">Upload</span>
                         </a>
                     </li>
 
@@ -107,37 +98,14 @@
             </nav>
         </div>
 
-        <div class="row social-button">
-            <div class="small-12 large-12 columns ">
-                <ul class="button-group even-3" >
-
-
-                    <li> 
-                        <a href="#" class="button" style="background:red"> 
-                            <span>Wants</span>
-                        </a>
-                    </li>
-                    <li> 
-                        <a href="#" class="button" style="background:red"> 
-                            <span>Hunts</span>
-                        </a>
-                    </li>
-                    <li> 
-                        <a href="#" class="button" style="background:red"> 
-                            <span>Browse</span>  
-                        </a>
-                    </li>
-
+        <div class="social-button" id="tabshori">     
+                <ul class="tabs" data-tab>
+                    <li class="tab-title" id="tab1"><a href="#panel1" style="background:red"><span>Wants</span></a></li>
+                    <li class="tab-title" id="tab2"><a href="#panel2" style="background:#fc9272"><span>Hunts</span></a></li>
+                    <li class="tab-title" id="tab3"><a href="#panel3" style="background:#fc9272"><span>Browse</span></a></li>
                 </ul>
-            </div>
         </div>
-        <div id="footer">
-            <ul class="tabs" data-tab>
-                <li class="tab-title" id="tab1"><a href="#panel1">Tab 1</a></li>
-                <li class="tab-title" id="tab2"><a href="#panel2">Tab 2</a></li>
-                <li class="tab-title" id="tab3"><a href="#panel3">Tab 3</a></li>
-            </ul>
-        </div>
+        
         <script>
             $('#tab1').on('click', function (event, tab) {
                 $('.tab-title').removeClass("active");
