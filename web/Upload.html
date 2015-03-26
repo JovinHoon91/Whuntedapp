@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+
+        <!-- css -->
+        <!-- Loading Flat UI -->
+        <link href="FlatUI/dist/css/flat-ui.css" rel="stylesheet">
+        <link href="FlatUI/docs/assets/css/demo.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="foundation/css/foundation.css" />
+        <link rel="stylesheet" type="text/css" href="foundation/css/normalize.css" />
+
+
+
+
+
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <!--bootstrap-->
+
+        <!--Foundation-->
+
+        <script src="foundation/js/foundation.min.js"></script>
+        <script src="foundation/js/foundation.tab.js"></script>
+        <script src="foundation/js/foundation.topbar.js"></script>
+        <script src="foundation/js/vendor/modernizr.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.js"></script>
+
+        <!--Foundation-->
+
+        <style>
+
+
+            .button #uploadwant {
+                font-size: 12px;
+                text-align: center;
+                line-height: 20px;
+                vertical-align: middle;
+                display:block;
+                color:white;
+                font-weight:bold;
+
+            }
+            #upload{
+                background: transparent;
+                font-weight:bold;
+            }
+            .top-bar{
+                background:red;
+
+            }
+
+            #uploadpic{
+                margin-top: 80px;
+                position:fixed;
+                float: left;
+                left:25px; 
+                font-size:13px;
+            }
+            #titlename{
+                margin-top: 150px;
+                position:fixed;
+                float: left;
+                left:25px; 
+                font-size:13px;
+            }
+            #price{
+                margin-top: 250px;
+                position:fixed;
+                float: left;
+                left:25px; 
+                font-size:13px;
+            }
+            .form-group1{
+                margin-top: 350px;
+                position:fixed;
+                float: left;
+                left:25px; 
+                font-size:13px;
+                width:190px
+            }
+
+            #POST{
+                margin-top: 510px;
+                position:fixed;
+                float: right;
+                right:30px; 
+                font-size:13px;
+                background:red;
+                text-align: center
+            }
+            #back{
+                margin-top: 10px;
+                position:fixed;
+                float: left;
+                left:-30px; 
+                font-size:15px;
+                background:red;
+                height:10px;
+                width:10px
+            }
+            .button .fui-arrow-left{
+                float:left;
+                left:10px
+                
+            }
+
+
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="">
+            <nav class="top-bar" data-topbar role="navigation">
+                <ul class="title-area">
+                    <li class="name">
+                        <img src="image/logo/whunted_white.png" style="margin-top: -10px;"></img>
+
+                        <a href="#" class="button" id="upload" style="position:relative;left:110px"> 
+                            <i class ="glyphicon glyphicon-user"></i>
+                            <span id="uploadwant">Profile</span>
+                        </a>
+                        <a href="#" class="button" id="upload" style="position:relative;right:-50px"> 
+                            <i class ="glyphicon glyphicon-camera" ></i>
+                            <span id="uploadwant">Upload</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </div>
+        <div>
+            <a  class="button " id="back" onClick="history.go(-1);return true;" > 
+                <span class="fui-arrow-left"></span>
+            </a>
+        </div>
+
+        <div class="form-group" id="uploadpic">
+            <label for="titlename"><b>Upload Picture</b></label>           
+            <input type="file" id="exampleInputFile">
+        </div>
+        <div class="form-group" id="titlename">
+            <label for="titlename"><b>Title Name</b></label>
+            <input type="text" class="form-control" id="naming" placeholder="">
+        </div>
+        <div class="form-group" id="price">
+            <label for="yourprice"><b>Your price ($)</b></label>
+            <input type="email" class="form-control" id="yourprice" placeholder="">
+        </div>
+
+        <div class="form-group1">
+            <label for="hashtags"> <b>Hashtags(optional)</b></label>
+            <input name="tagsinput" class="tagsinput" data-role="tagsinput" value="" />
+        </div>
+
+        <a href="#" class="button" id="POST" > 
+            POST!
+        </a>
+
+        <script src="FlatUI/dist/js/vendor/jquery.min.js"></script>
+        <script src="FlatUI/dist/js/vendor/video.js"></script>
+        <script src="FlatUI/dist/js/flat-ui.min.js"></script>
+        <script src="FlatUI/docs/assets/js/application.js"></script>
+    </body>
+</html>

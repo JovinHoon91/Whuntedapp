@@ -29,7 +29,7 @@
 
         <style>
             .social-button{
-                margin-top: 30px;
+                margin-top: 15px;
                 position:relative;
                 float: left;
                 left:25px
@@ -67,10 +67,6 @@
 
             }
             
-            div#tabshori ul li:active a{
-                background:#00000; 
-                color:#FFFFF;
-            }
 
         </style>
 
@@ -87,7 +83,7 @@
                             <i class ="glyphicon glyphicon-user"></i>
                             <span id="uploadwant">Profile</span>
                         </a>
-                        <a href="#" class="button" id="upload" style="position:relative;right:-50px"> 
+                        <a href="Upload.html" class="button" id="upload" style="position:relative;right:-50px"> 
                             <i class ="glyphicon glyphicon-camera" ></i>
                             <span id="uploadwant">Upload</span>
                         </a>
@@ -98,7 +94,7 @@
             </nav>
         </div>
 
-        <div class="social-button" id="tabshori">     
+        <div class="social-button">     
                 <ul class="tabs" data-tab>
                     <li class="tab-title" id="tab1"><a href="#panel1" style="background:red"><span>Wants</span></a></li>
                     <li class="tab-title" id="tab2"><a href="#panel2" style="background:#fc9272"><span>Hunts</span></a></li>
@@ -106,22 +102,7 @@
                 </ul>
         </div>
         
-        <script>
-            $('#tab1').on('click', function (event, tab) {
-                $('.tab-title').removeClass("active");
-                $('#tab1').addClass("active");
-            })
-            $('#tab2').on('click', function (event, tab) {
-                $('.tab-title').removeClass("active");
-                $('#tab2').addClass("active");
-            })
-            $('#tab3').on('click', function (event, tab) {
-                $('.tab-title').removeClass("active");
-                $('#tab3').addClass("active");
-            })
-            
-                    
-        </script>
+        
 
 
 
