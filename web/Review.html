@@ -3,15 +3,30 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>WHUNTED</title>
+
         <link rel="stylesheet" href="themes/whunt.min.css" />
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
         <!-- Star Rating -->
-        <script src="star-rating/jquery.rating.pack.js"></script>
-        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
+        <script src="star-rating/jquery.rating.js"></script>
+
+
+        <style>
+            .ui-li-thumb{
+                position:absolute;
+                top:0;
+                bottom:0;
+                padding-left: 10px;
+                margin:auto;
+            }
+            .navbar{
+                width:70%;
+            }
+        </style>
 
     </head>
     <body>
@@ -25,33 +40,68 @@
                             <td width="90%" align="left"><img src="image/logo/whunted_white.png"></td>
                             <td width="10%" style="padding-right:5%;color:white;font-size:12px"><a href="Login.html">
                                     <img src="themes/images/icons-png/user-white.png" style="position:relative;float:right;right:11px"></a>
-                                    Profile
+                                Profile
                             </td>
-                            <td width="10%" style="color:white;font-size:12px"><a href="Login.html">
+                            <td width="10%" style="color:white;font-size:12px"><a href="Upload.html">
                                     <img src="themes/images/icons-png/camera-white.png" style="position:relative;float:right;right:11px"></a>
-                                    Upload
+                                Upload
                             </td>
-                         
+
                         </tr>
                     </table>
                 </div>
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="NEW_WANT.html" class="ui-btn-active">WANTS</a></li>
-                        <li><a href="HuntsOffered.html">HUNTS</a></li>
+                        <li><a href="Wants_Accept.html" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <a href="" data-icon="back" class="ui-btn-left" onClick="history.go(-1);return true;" >Back</a>
-                    <h1>Review Seller</h1>
+                    <h1>Individual Seller</h1>
+                    <a href="ViewSellers_SellerA_Accept.html" data-icon="back" class="ui-btn-left">Back</a>
                 </div>
             </div>
 
             <!--Content-->
             <div data-role="content">
-                <center><img src="image/sellers/sellerB.jpg" style="width: 50%;"></center>
+                <div class="large-5 pull-7 columns path-text left">                    
+                    <div style="float:left">
+                        <h3>Justin</h3>
+                        <img src="image/sellers/sellerB.jpg" width="75" height="75">
+                        <div class="ui-li-count" style="color: green">Accepted</div>
+                    </div>
+                    <div style="float:right">
+                        <h3 style="font-size:80%;">                            
+                            <a href="ChatSeller.html"><img src="image/icon/chat.png" style="margin:10"></a>
+                            <a href=""><img src="image/icon/profile.png" style="margin:10"></a>
+                            <!--                            <a href="#"><img src="image/icon/handshake.png" style="margin:10"></a>-->
+                        </h3>
+                        <p>
+                            <input type="radio" name="2" class="star" disabled="disabled"/> 
+                            <input type="radio" name="2" class="star" disabled="disabled"/> 
+                            <input type="radio" name="2" class="star" disabled="disabled"/> 
+                            <input type="radio" name="2" class="star" disabled="disabled"/> 
+                            <input type="radio" name="2" class="star" disabled="disabled" checked="checked"/>
+                        </p><br/>
+                        <p style="font-size:80%;">Coach Swagger Carryall Handbag</p>
+                        <p style="font-size:80%;">Offer at $800</p>
+                        <p style="font-size:80%;">Delivery in 2 weeks</p>   
+
+                    </div>
+                </div>
+            </div>
+
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="" >PAST REVIEWS</a></li>
+                    <li><a href="#" class="ui-btn-active">WRITE YOUR REVIEW</a></li>
+                </ul>
+            </div>
+
+            <!--Content-->
+            <div data-role="content">
                 <!--Enter text fields of image-->
                 <table cellspacing="4" align="center">
                     <tr>
@@ -70,15 +120,28 @@
                     </tr>
                 </table>
                 <center>
-                    <a href="FINAL_WANT.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/tick.png"></a>
+                    <a href="ViewSellers_SellerA_Reviewed.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/tick.png"></a>
                 </center>
 
             </div>
 
-            
+
+            <!--Bottom navigation bar in the bottom container, Footer-->
+            <!--            <div data-role="footer" data-position="fixed">
+                            <div data-role="navbar">
+                                <ul>
+                                    <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
+                                    <li><a href="Chat.html" style="font-size: 60%" rel="external"><img src="image/icon/chat.png"></a></li>
+                                    <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
+                                    <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
+                                </ul>
+                            </div>
+                        </div> /footer -->
+
             <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
             <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-            <script src="star-rating/jquery.rating.pack.js"></script>
+            <script src="star-rating/jquery.rating.js"></script>
+
         </div><!-- /page -->
     </body>
 </html>

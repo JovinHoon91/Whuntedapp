@@ -8,9 +8,17 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- For Chat -->
+        <link rel='stylesheet' type='text/css' href='chat.css' />
+        <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+        <script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
+        <!--
+        -->        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script><!--
+        -->
     </head>
     <body>
-        <div data-role="page" data-theme="a">
+        <div data-role="page" data-theme="a" id="chat_page">
             <!--Navigation bar in the top container, Header is in RED-->
             <div data-role="header" data-position="fixed">
                 <!--Logo of Whunted is here-->
@@ -33,52 +41,69 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="Wants.html">WANTS</a></li>
+                        <li><a href="Wants.html" class="ui-btn-active" >WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
+
                 <div data-role="header">
-                    <h1>MY PROFILE</h1>
+                    <a href="" data-icon="back" class="ui-btn-left">Back</a>
+                    <h1>CHAT</h1>
                 </div>
             </div>
-            <!--Content-->
+            <!--Content: FOR CODES-->
             <div data-role="content">
+                <h3>To: <a href="">Justin <img src='image/sellers/seller3.png' width="30" height="30"></a></h3>
+                <div class="text-area" id='content'>
+                    <div id="messagesDiv"></div>
+                </div>
 
-                <center><img src="image/sellers/buyer2.png" style="width: 200; height:200"></center>
-                <form action="server.cgi" method="post" enctype="multipart/form-data">
-                    <!--Enter text fields of image-->
-                    <table  cellspacing="4" align="center">
-                        <tr>
-                            <td><b style="font-size:80%;">Name:</b></td>
-                            <td><p style="font-size:80%;">Stephanie Ng</p></td>
-                        </tr>
-                        <tr>
-                            <td><b style="font-size:80%;">Email:</b></td>
-                            <td><p style="font-size:80%;">stephanie.ng.2012@smu.edu.sg</p></td>
-                        </tr>
-                        <tr>
-                            <td><b style="font-size:80%;">Contact:</b></td>
-                            <td><p style="font-size:80%;">9876 5432</p></td>
-                        </tr>
-                    </table>
-                    <center>
-                        <a href="Profile_Edit.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/edit.png"></a>
-                    </center>
-                </form>
+                <div class="text-area">
+                    <input type='hidden' id='nameInput' value="">
+                    <input type='text' id='messageInput' placeholder='Message'>
+                    <a href="" class="ui-btn">Send</a>
+                </div>
             </div>
-
             <!--Bottom navigation bar in the bottom container, Footer-->
             <!--            <div data-role="footer" data-position="fixed">
                             <div data-role="navbar">
                                 <ul>
                                     <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
-                                    <li><a href="Chat_Buyer.html" style="font-size: 60%" rel="external"><img src="image/icon/chat.png"></a></li>
-                                    <li><a href="#" style="font-size: 60%" class="ui-btn-active"><img src="image/icon/profile.png"></a></li>
+                                    <li><a href="#" style="font-size: 60%" class="ui-btn-active"><img src="image/icon/chat.png"></a></li>
+                                    <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
                                     <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
                                 </ul>
                             </div>
                         </div> /footer -->
+
+            <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+            <script>
+                var myDataRef = new Firebase("https://boiling-torch-1825.firebaseio.com");
+                $('#messageInput').keypress(function(e) {
+                    if (e.keyCode == 13) {
+                        //var name = $('#nameInput').val();
+                        var name = "Stephanie";
+                        var text = $('#messageInput').val();
+                        myDataRef.push({name: name, text: text});
+                        $('#messageInput').val('');
+                    }
+                });
+
+                myDataRef.on('child_added', function(snapshot) {
+                    //We'll fill this in later.
+                    var message = snapshot.val();
+                    displayChatMessage(message.name, message.text);
+                });
+
+                function displayChatMessage(name, text) {
+                    $('<div/>').text(text).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
+                    $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+
+                }
+                ;
+            </script>  
         </div><!-- /page -->
     </body>
 </html>

@@ -3,13 +3,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>WHUNTED</title>
+        <!--DONE-->
         <link rel="stylesheet" href="themes/whunt.min.css" />
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     </head>
-    <body>
+    <body>       
+        <script>
+            //alert(sessionStorage.getItem("currentUser"));
+        </script>
         <div data-role="page" data-theme="a">
             <!--Navigation bar in the top container, Header is in RED-->
             <div data-role="header" data-position="fixed">
@@ -33,32 +37,39 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="Wants.html">WANTS</a></li>
-                        <li><a href="HuntsOffered.html">HUNTS</a></li>
+                        <li><a href="#" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <a href="Profile.html" data-icon="back" class="ui-btn-left">Back</a>
-                    <h1>EDIT PROFILE</h1>
+                    <form method="post" action="#">
+                        <input type="search" id="search" placeholder="Search for a want" data-mini="true">
+                    </form>
                 </div>
-            </div>
-            <!--Content-->
+            </div><!-- /header -->
+
+            <!--List of content wishes goes here! User can also edit ask price-->
             <div data-role="content">
-
-                <form action="server.cgi" method="post" enctype="multipart/form-data">
-                    <!--Enter text fields of image-->
-                    <p><b>Profile Image:</b> <input type="file" data-mini="true"/>
-                    <p><b>Name:</b> <input type="text" data-mini="true"/>
-                    <p><b>Email: </b> <input type="email" data-mini="true"/>
-                    <p><b>Contact Number: </b> <input type="tel" data-mini="true"/>
-                    <center>
-                        <a href="Profile_Edited.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/tick.png"></a>
-                    </center>
-                </form>
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="ViewSellers_SellerA_Accept.html"><span class="ui-li-count" style="color: #19B5FE;">PENDING</span>
+                            <img src="image/coach.PNG" class="ui-li-thumb" alt="">
+                            <h3 style="font-size:85%;" >Coach Swagger 37 Carryall</h3>
+                            <p style="font-size:80%;">$800</p>
+                            <p style="font-size:80%;">#Coach #Bag</p>    
+                            <span class="ui-li-count" data-role='button' style="color: darkblue;"> Seller confirmed <br><small>(click to view)</small></span>
+                        </a>                        
+                    </li>
+                    <li><a href="Wants_Edit.html"><span class="ui-li-count" style="color: #19B5FE;">PENDING <br><small>(click to edit)</small></span>
+                            <img src="image/katespade.PNG" class="ui-li-thumb" alt="">
+                            <h3 style="font-size:85%;" >Kate Spade Bag</h3>
+                            <p style="font-size:80%;">$1580</p>
+                            <p style="font-size:80%;">#Kate #Spade #Bag</p>
+                            <p style="font-size:80%;">0 seller</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
-
-          
-        </div><!-- /page -->
+        </div>
     </body>
 </html>

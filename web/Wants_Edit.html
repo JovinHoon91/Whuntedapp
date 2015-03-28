@@ -18,8 +18,16 @@
                 <div data-role="header" style="background-color: #E74C3C">
                     <table cellspacing="4" align="center" width="100%">
                         <tr>
-                            <td width="90%" align="center" style="padding-left: 10%;"><img src="image/logo/whunted_white.png"></td>
-                            <td width="10%"><a href="Login.html"><img src="image/icon/logout_v2.png"></a></td>
+                            <td width="90%" align="left"><img src="image/logo/whunted_white.png"></td>
+                            <td width="10%" style="padding-right:5%;color:white;font-size:12px"><a href="Login.html">
+                                    <img src="themes/images/icons-png/user-white.png" style="position:relative;float:right;right:11px"></a>
+                                Profile
+                            </td>
+                            <td width="10%" style="color:white;font-size:12px"><a href="Upload.html">
+                                    <img src="themes/images/icons-png/camera-white.png" style="position:relative;float:right;right:11px"></a>
+                                Upload
+                            </td>
+
                         </tr>
                     </table>
                 </div>
@@ -38,29 +46,20 @@
             </div>
             <!--Content-->
             <div data-role="content">
-                
-                <center><img src="image/coach.PNG" style="width: 50%;"></center>
+
+                <center><img src="image/katespade.PNG" style="width: 50%;"></center>
                 <form action="server.cgi" method="post" enctype="multipart/form-data">
                     <!--Enter text fields of image-->
-                    <b style="font-size:80%;">Item Name: </b><input type="text" name="itemName" data-mini="true" value="Coach">
-                    <b style="font-size:80%;">Ask Price ($): </b><input type="number" name="price" data-mini="true" value="800">
-                    <b style="font-size:80%;">Hashtags: </b><input type="text" name="hashtag" data-mini="true" value="#Coach #Bag">
+                    <b style="font-size:80%;">Item Name: </b><input type="text" name="itemName" data-mini="true" value="Kate Spade Bag">
+                    <b style="font-size:80%;">Ask Price ($): </b><input type="number" name="price" data-mini="true" value="1580">
+                    <b style="font-size:80%;">Hashtags: </b><input type="text" name="hashtag" data-mini="true" value="#Kate #Spade #Bag">
                     <!--Need to fix the submit buttons!-->
-                    <a href="Wants_updated.html" class="ui-btn ui-btn-w ui-btn-inline ui-mini" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">UPDATE</a>
+                    <a href="Wants.html" class="ui-btn ui-btn-w ui-btn-inline ui-mini" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">UPDATE</a>
+                    <a href="Wants.html" class="ui-btn ui-btn-w ui-btn-inline ui-mini" style="background-color: #E74C3C; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">CANCEL</a>
                 </form>
             </div>
 
-            <!--Bottom navigation bar in the bottom container, Footer-->
-            <div data-role="footer" data-position="fixed">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
-                        <li><a href="Chat.html" style="font-size: 60%" rel="external"><img src="image/icon/chat.png"></a></li>
-                        <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
-                        <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
-                    </ul>
-                </div>
-            </div><!-- /footer -->
+
         </div><!-- /page -->
     </body>
 </html>

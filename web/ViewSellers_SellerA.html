@@ -8,7 +8,8 @@
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" href="star-rating/jquery.rating.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-        <script src="star-rating/jquery.rating.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
         <!-- Star Rating -->
         <script src="star-rating/jquery.rating.js"></script>
@@ -21,6 +22,9 @@
                 bottom:0;
                 padding-left: 10px;
                 margin:auto;
+            }
+            .navbar{
+                width:70%;
             }
         </style>
 
@@ -38,7 +42,7 @@
                                     <img src="themes/images/icons-png/user-white.png" style="position:relative;float:right;right:11px"></a>
                                 Profile
                             </td>
-                            <td width="10%" style="color:white;font-size:12px"><a href="Login.html">
+                            <td width="10%" style="color:white;font-size:12px"><a href="Upload.html">
                                     <img src="themes/images/icons-png/camera-white.png" style="position:relative;float:right;right:11px"></a>
                                 Upload
                             </td>
@@ -49,70 +53,85 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="Wants_page2.html" class="ui-btn-active">WANTS</a></li>
-                        <li><a href="HuntsOffered.html">HUNTS</a></li>
+                        <li><a href="Wants.html" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <a href="" data-icon="back" class="ui-btn-left" onClick="history.go(-1);return true;" >Back</a>
-                    <h1>Justin</h1>
+                    <h1>Individual Seller</h1>
+                    <a href="ViewSellers.html" data-icon="back" class="ui-btn-left">Back</a>
                 </div>
             </div>
 
             <!--Content-->
+            <script>
+                function confirm_accept() {
+                    return confirm('Accept this deal?');
+                }
+            </script>
             <div data-role="content">
-                <center><img src="image/sellers/sellerB.jpg" style="width: 50%;"></center>
-                <!--Enter text fields of image-->
-                <table cellspacing="4" align="center">
-                    <tr>
-                        <td><b style="font-size:80%;">Ratings:</b></td>
-                        <td>
-                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star1" type="radio" class="star" disabled="disabled" checked="checked"/>
-                        </td>
-                    </tr>
-                </table>
-
-                <h4>REVIEWS FROM BUYERS</h4>
-                <ul data-role="listview" data-inset="true">
-                    <li>
-                        <img src="image/sellers/alice.png" class="ui-li-thumb" >
-                        <p style="font-size:80%;"><i>"Trustworthy"</i></p>
-                        <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                        <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                        <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                        <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                        <input name="star2" type="radio" class="star" disabled="disabled" checked="checked"/>
-                    </li>
-                </ul>
-
-                <center>
-                    <a href="#Wantaccepted" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" ><img src="image/icon/handshake.png"></a>
-                    <a href="Chat.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" rel="external"><img src="image/icon/chat_button.png"></a>
-
-                </center>
-                <div data-role="popup" id="Wantaccepted" data-overlay-theme="a" data-theme="a" data-dismissible="false">
-                    <div data-role="header" data-theme="a">
-                        <h1>Deal?</h1>
+                <div class="large-5 pull-7 columns path-text left">                    
+                    <div style="float:left">
+                        <h3>Justin</h3>
+                        <img src="image/sellers/sellerB.jpg" width="75" height="75">
                     </div>
-                    <div role="main" class="ui-content">
-                        <a href="" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right" style="margin-top:1%">Close</a>
-                        <p>Coach Swagger Carryall</p>
-                        <p>#Coach #Bag</p>
-                        <p>Ask Price: $800</p>
-                        <p>Delivery time: 2 weeks</p>
-                        <a href="ViewSellers_SellerAAccepted.html"  class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" style="margin-top:10%">Accept</a>
-                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" style="margin-top:10%">Not Yet</a>
+                    <div style="float:right">
+                        <h3 style="font-size:80%;">                            
+                            <a href="ChatSeller.html"><img src="image/icon/chat.png" style="margin:10"></a>
+                            <a href="#"><img src="image/icon/profile.png" style="margin:10"></a>
+                            <a href="ViewSellers_SellerA_Accept.html" onclick="return confirm_accept()" ><img src="image/icon/handshake.png" style="margin:10"></a>
+                        </h3>
+                        <p>
+                            <input type="radio" name="2" class="star" disabled="disabled"/> 
+                            <input type="radio" name="2" class="star" disabled="disabled"/> 
+                            <input type="radio" name="2" class="star" disabled="disabled"/> 
+                            <input type="radio" name="2" class="star" disabled="disabled"/> 
+                            <input type="radio" name="2" class="star" disabled="disabled" checked="checked"/>
+                        </p><br/>
+                        <p style="font-size:80%;">Coach Swagger Carryall Handbag</p>
+                        <p style="font-size:80%;">Offer at $800</p>
+                        <p style="font-size:80%;">Delivery in 2 weeks</p>   
+
                     </div>
                 </div>
             </div>
-            <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-            <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-            <script src="star-rating/jquery.rating.js"></script>
-        </div><!-- /page -->
+
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" class="ui-btn-active">PAST REVIEWS</a></li>
+                    <!--                    <li><a href="">WRITE YOUR REVIEW</a></li>-->
+                </ul>
+            </div>
+
+            <ul data-role="listview" data-inset="true">
+                <li>
+                    <img src="image/sellers/alice.png" class="ui-li-thumb" >
+                    <p style="font-size:80%;"><i>"Trustworthy"</i></p>
+                    <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                    <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                    <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                    <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                    <input name="star2" type="radio" class="star" disabled="disabled" checked="checked"/>
+                </li>
+            </ul>
+        </div>
+
+
+        <!--Bottom navigation bar in the bottom container, Footer-->
+        <!--            <div data-role="footer" data-position="fixed">
+                        <div data-role="navbar">
+                            <ul>
+                                <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
+                                <li><a href="Chat.html" style="font-size: 60%" rel="external"><img src="image/icon/chat.png"></a></li>
+                                <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
+                                <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
+                            </ul>
+                        </div>
+                    </div> /footer -->
+
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="star-rating/jquery.rating.js"></script>    
     </body>
 </html>
